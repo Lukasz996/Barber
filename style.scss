@@ -1,0 +1,113 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Zmienne */
+$primary-color: #333;
+$secondary-color: #fff;
+$bg-color: #f4f4f4;
+$font-family: Arial, sans-serif;
+$button-hover: #555;
+
+/* Ustawienia dla całej strony */
+body {
+	font-family: $font-family;
+	line-height: 1.6;
+	background-color: $bg-color;
+	color: $primary-color;
+	padding: 20px;
+}
+
+/* Nagłówek */
+header {
+	background: $primary-color;
+	color: $secondary-color;
+	padding: 20px 0;
+	text-align: center;
+
+	h1 {
+		margin-bottom: 10px;
+	}
+
+	nav ul {
+		list-style: none;
+
+		li {
+			display: inline;
+			margin: 0 15px;
+
+			a {
+				color: $secondary-color;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+/* Główna część strony */
+main {
+	margin-top: 20px;
+
+	section {
+		background: $secondary-color;
+		margin-bottom: 20px;
+		padding: 20px;
+		border-radius: 5px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+		h2 {
+			margin-bottom: 10px;
+			color: $primary-color;
+		}
+
+		p {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+/* Formularz kontaktowy */
+form {
+	display: flex;
+	flex-direction: column;
+
+	label {
+		margin-bottom: 5px;
+		font-weight: bold;
+	}
+
+	input,
+	textarea {
+		margin-bottom: 15px;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		font-size: 16px;
+	}
+
+	button {
+		padding: 10px;
+		border: none;
+		background: $primary-color;
+		color: $secondary-color;
+		font-size: 16px;
+		border-radius: 5px;
+		cursor: pointer;
+
+		&:hover {
+			background: $button-hover;
+		}
+	}
+}
+
+/* Stopka */
+footer {
+	text-align: center;
+	margin-top: 20px;
+	padding: 10px 0;
+	background: $primary-color;
+	color: $secondary-color;
+	border-radius: 5px;
+}
