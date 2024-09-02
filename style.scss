@@ -1,17 +1,20 @@
+/* Definiowanie zmiennych */
+$primary-color: #3f78b1;
+$secondary-color: #ecf0f1;
+$accent-color: #e74c3c;
+$bg-color: #f4f4f4;
+$font-family: "Roboto", sans-serif;
+$button-hover: darken($accent-color, 10%);
+$border-radius: 8px;
+
+/* Resetowanie marginesów i wypełnień */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-/* Zmienne */
-$primary-color: #333;
-$secondary-color: #fff;
-$bg-color: #f4f4f4;
-$font-family: Arial, sans-serif;
-$button-hover: #555;
-
-/* Ustawienia dla całej strony */
+/* Stylizacja dla całej strony */
 body {
 	font-family: $font-family;
 	line-height: 1.6;
@@ -20,33 +23,42 @@ body {
 	padding: 20px;
 }
 
-/* Nagłówek */
+/* Stylizacja dla nagłówka */
 header {
 	background: $primary-color;
 	color: $secondary-color;
 	padding: 20px 0;
 	text-align: center;
+	border-radius: $border-radius;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 	h1 {
 		margin-bottom: 10px;
+		font-size: 2.5rem;
+		font-weight: 700;
 	}
 
-	nav ul {
+	nav {
 		list-style: none;
+		padding: 0;
 
-		li {
-			display: inline;
-			margin: 0 15px;
+		a {
+			color: $secondary-color;
+			text-decoration: none;
+			font-weight: 600;
+			padding: 10px 15px;
+			border-radius: $border-radius;
+			transition: background 0.3s, transform 0.2s;
 
-			a {
-				color: $secondary-color;
-				text-decoration: none;
+			&:hover {
+				background: lighten($primary-color, 10%);
+				transform: translateY(-3px);
 			}
 		}
 	}
 }
 
-/* Główna część strony */
+/* Stylizacja dla głównej części strony */
 main {
 	margin-top: 20px;
 
@@ -54,21 +66,24 @@ main {
 		background: $secondary-color;
 		margin-bottom: 20px;
 		padding: 20px;
-		border-radius: 5px;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		border-radius: $border-radius;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 		h2 {
-			margin-bottom: 10px;
+			margin-bottom: 15px;
 			color: $primary-color;
+			font-size: 1.75rem;
 		}
 
 		p {
 			margin-bottom: 15px;
+			font-size: 1rem;
+			color: darken($primary-color, 20%);
 		}
 	}
 }
 
-/* Formularz kontaktowy */
+/* Stylizacja dla formularza kontaktowego */
 form {
 	display: flex;
 	flex-direction: column;
@@ -76,25 +91,33 @@ form {
 	label {
 		margin-bottom: 5px;
 		font-weight: bold;
+		font-size: 1rem;
 	}
 
 	input,
 	textarea {
 		margin-bottom: 15px;
-		padding: 10px;
-		border: 1px solid #ccc;
-		border-radius: 5px;
-		font-size: 16px;
+		padding: 12px;
+		border: 1px solid lighten($primary-color, 40%);
+		border-radius: $border-radius;
+		font-size: 1rem;
+		background: lighten($secondary-color, 5%);
+		transition: border 0.3s;
+
+		&:focus {
+			border-color: $primary-color;
+		}
 	}
 
 	button {
-		padding: 10px;
+		padding: 12px;
 		border: none;
-		background: $primary-color;
+		background: $accent-color;
 		color: $secondary-color;
-		font-size: 16px;
-		border-radius: 5px;
+		font-size: 1rem;
+		border-radius: $border-radius;
 		cursor: pointer;
+		transition: background 0.3s;
 
 		&:hover {
 			background: $button-hover;
@@ -102,12 +125,57 @@ form {
 	}
 }
 
-/* Stopka */
+/* Stylizacja dla stopki */
 footer {
 	text-align: center;
 	margin-top: 20px;
-	padding: 10px 0;
+	padding: 15px 0;
 	background: $primary-color;
 	color: $secondary-color;
-	border-radius: 5px;
+	border-radius: $border-radius;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+	p {
+		font-size: 0.875rem;
+	}
+}
+
+/* Responsywność */
+
+@media (max-width: 768px) {
+	header h1 {
+		font-size: 2rem;
+	}
+
+	nav ul li {
+		margin: 0 10px;
+	}
+
+	section {
+		padding: 15px;
+	}
+}
+
+@media (max-width: 480px) {
+	nav ul {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		li {
+			margin: 5px 0;
+		}
+	}
+
+	header h1 {
+		font-size: 1.75rem;
+	}
+
+	section h2 {
+		font-size: 1.5rem;
+	}
+
+	section p {
+		font-size: 0.95rem;
+	}
 }
