@@ -2,72 +2,78 @@
 /* Definiowanie zmiennych */
 /* Resetowanie marginesów i wypełnień */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 /* Stylizacja dla całej strony */
 body {
-  font-family: "Roboto", sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #3f78b1;
-  padding: 20px;
+	font-family: "Roboto", sans-serif;
+	line-height: 1.6;
+	background-color: #f4f4f4;
+	color: #3f78b1;
+	padding: 20px;
 }
 
 /* Stylizacja dla nagłówka */
 header {
-  background: #3f78b1;
-  color: #ecf0f1;
-  padding: 20px 0;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	background: #3f78b1;
+	color: #ecf0f1;
+	padding: 20px 0;
+	text-align: center;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 header h1 {
-  margin-bottom: 10px;
-  font-size: 2.5rem;
-  font-weight: 700;
+	margin-bottom: 10px;
+	font-size: 2.5rem;
+	font-weight: 700;
 }
 header nav {
-  list-style: none;
-  padding: 0;
+	list-style: none;
+	padding: 0;
 }
 header nav a {
-  color: #ecf0f1;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 10px 15px;
-  border-radius: 8px;
-  transition: background 0.5s ;
+	color: #ecf0f1;
+	text-decoration: none;
+	font-weight: 600;
+	padding: 10px 15px;
+	border-radius: 8px;
+	transition: background 0.5s;
 }
 header nav a:hover {
-  background: #5d92c6;
-  border: 1px solid #ecf0f1;
+	background: #5d92c6;
+	border: 1px solid #ecf0f1;
 }
 
 /* Stylizacja dla głównej części strony */
 main {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 main section {
-  background: #ecf0f1;
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	display: block;
+	justify-content: center;
+	text-align: center;
+	background: #ecf0f1;
+	margin-bottom: 20px;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 main section h2 {
-  margin-bottom: 15px;
-  color: #3f78b1;
-  font-size: 1.75rem;
+	margin-bottom: 15px;
+	color: #3f78b1;
+	font-size: 1.75rem;
 }
 main section p {
-  margin-bottom: 15px;
-  font-size: 1rem;
-  color: #244566;
+	margin-bottom: 15px;
+	font-size: 1rem;
+	color: #244566;
+	text-align: center;
 }
+
+
 
 /* Stylizacja dla formularza kontaktowego */
 /* form {
@@ -109,48 +115,48 @@ form button:hover {
 
 /* Stylizacja dla stopki */
 footer {
-  text-align: center;
-  margin-top: 20px;
-  padding: 15px 0;
-  background: #3f78b1;
-  color: #ecf0f1;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	margin-top: 20px;
+	padding: 15px 0;
+	background: #3f78b1;
+	color: #ecf0f1;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 footer p {
-  font-size: 0.875rem;
+	font-size: 0.875rem;
 }
 
 /* Responsywność */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
-  nav ul li {
-    margin: 0 10px;
-  }
-  section {
-    padding: 15px;
-  }
+	header h1 {
+		font-size: 2rem;
+	}
+	nav ul li {
+		margin: 0 10px;
+	}
+	section {
+		padding: 15px;
+	}
 }
 @media (max-width: 480px) {
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  nav ul li {
-    margin: 5px 0;
-  }
-  header h1 {
-    font-size: 1.75rem;
-  }
-  section h2 {
-    font-size: 1.5rem;
-  }
-  section p {
-    font-size: 0.95rem;
-  }
+	nav ul {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	nav ul li {
+		margin: 5px 0;
+	}
+	header h1 {
+		font-size: 1.75rem;
+	}
+	section h2 {
+		font-size: 1.5rem;
+	}
+	section p {
+		font-size: 0.95rem;
+	}
 }
 
 /*# sourceMappingURL=style.css.map */
