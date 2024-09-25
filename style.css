@@ -20,18 +20,16 @@ body {
 header {
 	background-color: #f5f5dc;
 	color: #552525;
-	padding: 20px 0;
 	text-align: center;
 	border-radius: 8px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 header h1 {
 	color: #552525;
-	margin-bottom: 10px;
 	font-size: 2.5rem;
 	font-weight: 700;
 }
-header nav {
+/* header nav {
 	list-style: none;
 	padding: 0;
 }
@@ -46,16 +44,14 @@ header nav a {
 header nav a:hover {
 	background: #5d92c6;
 	border: 1px solid #ecf0f1;
-}
+} */
 
 /* Stylizacja dla głównej części strony */
 main {
 	margin-top: 20px;
 }
 main section {
-	display: block;
-	justify-content: center;
-	text-align: center;
+	display: flex;
 	background-color: #cecece;
 	margin-bottom: 20px;
 	padding: 20px;
@@ -67,23 +63,29 @@ main section h2 {
 	color: #3f78b1;
 	font-size: 1.75rem;
 }
+
 main section p {
 	margin-bottom: 15px;
 	font-size: 1rem;
 	color: #244566;
 	text-align: center;
+	width: 30vw;
 }
 
-
-
-.location {
-	display: block;
+main div img {
+	object-fit: contain;
+	width: 30vw;
 }
 
-
-
-
-
+.grid-containter {
+	display: grid;
+	grid-template-columns: auto auto ;
+	
+}
+.grid-item {
+	padding: 30px;
+	text-align: center;
+}
 
 /* Stylizacja dla formularza kontaktowego */
 /* form {
@@ -128,7 +130,7 @@ footer {
 	text-align: center;
 	margin-top: 20px;
 	padding: 15px 0;
-	background:#f5f5dc;
+	background: #f5f5dc;
 	color: #552525;
 	border-radius: 8px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
